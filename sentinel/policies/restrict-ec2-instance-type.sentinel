@@ -1,0 +1,14 @@
+import "tfplan-functions" as plan
+
+allowed_types = ["t3.micro", "t3.small", "t3.medium"]
+
+allEC2Instances = plan.find_resources("aws_instance")
+
+violatingEC2Instances = plan.filter_attribute_not_in_list(allEC2Instances,
+                        "instance_type", allowed_types, true)
+
+violations = length(violatingEC2Instances["messages"])
+
+main = rule {
+  violations is 0
+}
