@@ -3,7 +3,7 @@ This is a template repo for james purcells projects piece. It is used to create 
 - AWS OIDC Connections for Dynamic Credentials
 - An Infra Repository and 3 corresponding workspaces per environment
 - An Application Developer repository and 3 corresponding workspaces per environment
-- Two projects, one for Infra and one for Application Developers
+- Two projects per account, one for Infra and one for Application Developers
 - An admin team & development team per project
 - A variable set to be attached to both projects including AWS Dynamic Credentials
 
@@ -69,7 +69,7 @@ or
 If you want both you will need two seperate policy sets where you choose the other path for the other set.
 
 ## Final Thoughts
-As noted in the call, this is not production ready code nor should it be expected to run indefinitely. As and when provider updates occur this code is likely to break. This should more be seen as a discussion piece and an introductory idea as to how landing zone code may be used in your future.
+This is not production ready code nor should it be expected to run indefinitely. As and when provider updates occur this code is likely to break. This should more be seen as a discussion piece and an introductory idea as to how landing zone code may be used in your future.
 
 
 <!-- BEGIN_TF_DOCS -->
